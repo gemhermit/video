@@ -12,49 +12,52 @@
   <meta name="baidu-site-verification" content="" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="keywords" content="about bago,贝谷,关于贝谷,bago"/>
-  <meta name="description" content="about bago,贝谷,关于贝谷,bago"/>
+  <meta name="keywords" content="bago video,贝谷,贝谷,bago"/>
+  <meta name="description" content="bago video,贝谷,贝谷,bago,万部精彩大片免费看"/>
   <Meta name="Copyright" Content="  © 2020 bago.All Rights Reserve">
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <meta name="HandheldFriendly" content="True">
-   </head> 
+   <script src="js/getParameter.js"></script>
    <script>
-    var name = $.getUrlParam('name');
-    var id = $.getUrlParam('id');
-
-    window.onload = function(){
-        $("#").val(name);
-        $("#").val(id);
-    }
-</script>
+       $(function () {
+           var search = location.search;
+           alert(search); //获取URL中?后的句子
+           var string = search.split("=")[1]; //分割取出cid
+           alert(string);
+           var cid = getParameter("cid"); //通过getParameter获取
+           alert(cid);
+       });
+   </script>   
+   </head> 
     <body>
 <header>
-  <nav class="blue">
-    <div class="nav-wrapper blue container">
+  <nav class="cyan darken-2">
+    <div class="nav-wrapper cyan darken-2  container">
 
-      <a href="https://bago.ink" class="brand-logo"> 贝谷</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="index">关于我们</a></li>
-        <li><a href="products">我们的产品</a></li>
-        <li><a href="news">新闻动态</a></li>
-        <li><a href="responsibility">社会责任</a></li>
-        <li><a href="https://job.bago.ink/company/bago">加入我们</a></li>
-        <li><a href="contact">联系我们</a></li>
+      <a href="https://bago.ink" class="brand-logo"> 贝谷视频</a>
+  
+      <ul id="nav-mobile" class="right hide-on-med-and-down"> 
+           <form>
+          <div class="input-field brand-logo right">
+            <input id="search" type="search" required>
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          </div>
+        </form>
       </ul>
     </div>
   </nav>
 </header>
 <main>
   <div class="video-container">
-    <iframe width="853" height="480" src="https://jx.7639616.com/?url=https://cn2.qxreader.com/hls/20200116/c344e3ae93df90a236d5b859ad2694eb/1579179307/index.m3u8" frameborder="0" allowfullscreen></iframe>
+    <iframe width="853" height="480" src="https://jx.7639616.com/?url=https://cn6.18787000118.com/hls/20200312/db2c02ece8011b85365b9376b3329b72/index.m3u8" frameborder="0" allowfullscreen></iframe>
   </div>
 </main> 
-          <footer class="page-footer blue">
+          <footer class="page-footer cyan darken-2">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
-                <h4 class="white-text">贝谷</h4>
+                <h4 class="white-text">贝谷视频</h4>
                 <h6 class="grey-text text-lighten-4">改变世界的力量</h6>
               </div>
               <div class="col l4 offset-l2 s12">
@@ -72,8 +75,12 @@
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2020 bago.All Rights Reserve
-            <a class="grey-text text-lighten-4 right" href="opensource/about.html">开源地址</a>
+              Copyright © 2020 bago.All Rights Reserve
+            <div class="grey-text right"><a  class="white-text" href="http://about.bago.ink">关于贝谷 </a>
+            <a  class="white-text" href="contract">服务协议 </a>
+            <a  class="white-text" href="http://about.bago.ink/privacy">隐私政策 </a>
+            <a  class="white-text" href="http://about.bago.ink/feedback">意见反馈 </a>   </div>
+            
             </div>
           </div>
           <div style="display:none"> 
@@ -82,9 +89,12 @@
         </footer>
                  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
-        </body>
+    
+      id="url"
         <label>测试URL中的name是：</label>
-        <input type="text" id="addname" />
-        <label>测试URL中的id是：</label>
-        <input type="text" id="addid" />
+        <input type="text" id="name" />
+        <label ></label>
+        <input type="text" id="url" />
+        <a id="url"></a>
         <a href="play.html?name=123&id=1234">点击测试获取url参数</a>
+</body>
