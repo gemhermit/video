@@ -54,9 +54,16 @@
   </nav>
   <br>
 
-  <div class="video-container">
-<iframe src="//player.bilibili.com/player.html?aid=91674802&bvid=BV1A7411M7nB&cid=156533791&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-  </div>
+  <div id="player"></div>
+<script type="text/javascript" src="https://player.dogecloud.com/js/loader"></script>
+<script type="text/javascript">
+var player = new DogePlayer({
+    container: document.getElementById('player'),
+    userId: 1433,
+    vcode: '8f3a9f134897743c',
+    autoPlay: true
+});
+</script>
 </main> 
           <footer class="page-footer cyan darken-2">
      
